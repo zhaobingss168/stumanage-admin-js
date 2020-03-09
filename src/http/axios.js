@@ -20,6 +20,7 @@ export default function $axios(options) {
         // 如果token不是空，在请求头中带上token
         if (token) {
           config.headers.token = token
+          config.headers.typeid = '1'
         } else { // 如果token为空，重定向到登录页面
           // 重定向到登录页面
           router.push('/login')
